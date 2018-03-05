@@ -1,3 +1,4 @@
-= simple_form_for([@post, @post.comments.build]) do |f|
-	= f.input :comment
-	= f.submit
+.comment_input
+	= simple_form_for([@post, @post.comments.build]) do |f|
+		= f.input :comment
+		= f.submit

@@ -1,5 +1,7 @@
-%h1 Edit Comment
-
-= simple_form_for([@post,@comment]) do |f|
-	= f.input :comment
-	= f.submit
+.edit
+	%h2 Edit Comment
+.form
+	= simple_form_for([@post,@comment]) do |f|
+		= f.input :comment
+		%br/
+		= f.submit
