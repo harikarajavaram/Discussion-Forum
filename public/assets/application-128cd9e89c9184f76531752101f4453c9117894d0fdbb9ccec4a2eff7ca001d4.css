@@ -1,0 +1,354 @@
+/* line 5, /app/app/assets/stylesheets/posts.scss */
+body {
+  font-family: 'Lato', sans-serif;
+  background: #EDEFF0;
+}
+
+/* line 10, /app/app/assets/stylesheets/posts.scss */
+.wrapper {
+  width: 60%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* line 16, /app/app/assets/stylesheets/posts.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 22, /app/app/assets/stylesheets/posts.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 26, /app/app/assets/stylesheets/posts.scss */
+.main_header {
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+}
+/* line 30, /app/app/assets/stylesheets/posts.scss */
+.main_header #logo {
+  float: left;
+}
+/* line 32, /app/app/assets/stylesheets/posts.scss */
+.main_header #logo a {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #397CAC;
+  font-family: 'Lato', sans-serif;
+}
+/* line 42, /app/app/assets/stylesheets/posts.scss */
+.main_header #buttons {
+  float: right;
+}
+/* line 44, /app/app/assets/stylesheets/posts.scss */
+.main_header #buttons a {
+  line-height: 60px;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  background: #397CAC;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 57, /app/app/assets/stylesheets/posts.scss */
+#posts {
+  background: white;
+  padding: 2em 5%;
+  border-radius: 0.5em;
+}
+/* line 61, /app/app/assets/stylesheets/posts.scss */
+#posts .post {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-bottom: 1px solid #D1d1d1;
+}
+/* line 65, /app/app/assets/stylesheets/posts.scss */
+#posts .post .title {
+  margin: 0;
+}
+/* line 67, /app/app/assets/stylesheets/posts.scss */
+#posts .post .title a {
+  text-decoration: none;
+  font-weight: 100;
+  color: #397CAC;
+  font-size: 1.25rem;
+  font-family: 'Lato', sans-serif;
+}
+/* line 75, /app/app/assets/stylesheets/posts.scss */
+#posts .post .date {
+  margin-top: .25rem;
+  font-size: 0.9rem;
+  color: #808080;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 84, /app/app/assets/stylesheets/posts.scss */
+.button {
+  color: #397CAC;
+  border: 1px solid #397CAC;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  text-decoration: none;
+  margin-right: 2%;
+}
+
+/* line 93, /app/app/assets/stylesheets/posts.scss */
+.comment_input {
+  color: #397CAC;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 98, /app/app/assets/stylesheets/posts.scss */
+#post_content {
+  background: white;
+  padding: 2em 5%;
+  border-radius: 0.5em;
+  font-family: 'Lato', sans-serif;
+}
+/* line 104, /app/app/assets/stylesheets/posts.scss */
+#post_content h1 {
+  text-decoration: none;
+  font-weight: 100;
+  color: #397CAC;
+  font-size: 2em;
+  margin-top: 0;
+}
+/* line 111, /app/app/assets/stylesheets/posts.scss */
+#post_content p {
+  color: #808080;
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 1.5;
+}
+/* line 118, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments h2, #post_content #comments h3 {
+  color: #397CAC;
+}
+/* line 121, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments .comment {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #D1d1d1;
+  font-family: 'Lato', sans-serif;
+}
+/* line 127, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments .comment .content {
+  width: 75%;
+  float: left;
+}
+/* line 131, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments .comment .buttons {
+  width: 25%;
+  float: left;
+  font-size: 0.8em;
+  text-align: right;
+  padding-top: 1.5em;
+}
+/* line 137, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments .comment .buttons a {
+  color: #397CAC;
+  border: 1px solid #397CAC;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  text-decoration: none;
+  margin-right: 2%;
+}
+/* line 146, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments .comment .comment_content {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+/* line 152, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments .comment .comment_author {
+  color: #397CAC;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-size: 0.7em;
+  font-family: 'Lato', sans-serif;
+}
+/* line 160, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments input[type="submit"] {
+  background: #397CAC;
+  border: none;
+  color: white;
+  font-weight: 100;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  font-family: 'Lato', sans-serif;
+}
+/* line 170, /app/app/assets/stylesheets/posts.scss */
+#post_content #comments textarea {
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid #D1d1d1;
+  border-radius: 0.2em;
+  margin: 1em, 0;
+}
+
+/* line 180, /app/app/assets/stylesheets/posts.scss */
+.form {
+  color: #397CAC;
+}
+/* line 182, /app/app/assets/stylesheets/posts.scss */
+.form input[type="submit"] {
+  background: #397CAC;
+  border: none;
+  color: white;
+  font-weight: 100;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  font-family: 'Lato', sans-serif;
+}
+/* line 192, /app/app/assets/stylesheets/posts.scss */
+.form textarea {
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid #D1d1d1;
+  border-radius: 0.2em;
+  margin: 1em, 0;
+}
+
+/* line 203, /app/app/assets/stylesheets/posts.scss */
+.edit h2 {
+  color: #397CAC;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	font-family: 'Lato', sans-serif;
+	background: #EDEFF0;
+}
+
+.wrapper {
+	width: 60%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.main_header {
+	width: 100%;
+	margin: 0 auto;
+	background: white;	
+	#logo {
+		float: left;
+		a{
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: -1px;
+			font-size: 1.2rem;
+			text-decoration: none;
+			color: #397CAC;		
+		}
+	}
+	#buttons {
+		float: right;
+		a {
+			line-height: 60px;
+			padding: 0.5em 1em;
+			border-radius: 0.2em;
+			color: white;
+			text-decoration: none;
+			font-weight: 100;
+			background: #397CAC; 
+		}
+	}
+}
+
+#posts {
+	background: white;
+	padding: 2em 5%;
+	border-radius: 0.5em;
+	.post {
+		margin: 1em 0;	
+		padding: 1em 0;
+		border-bottom: 1px solid #D1d1d1;
+		.title{
+			margin: 0;
+			a {
+				text-decoration: none;
+				font-weight: 100;
+				color: #397CAC;
+				font-size: 1.25rem;
+			}
+		}
+		.date {
+			margin-top: .25rem;
+			font-size: 0.9rem;
+			color: #B2BAC2;
+		}
+	}
+}
+
+#post_content {
+	background: white;
+	padding: 2em 5%;
+	border-radius: 0.5em;
+	h1 {
+		text-decoration: none;
+		font-weight: 100;
+		color: #397CAC;
+		font-size: 2em;
+		margin-top: 0;
+	}
+	p {
+		color: #B2BAC2;	
+		font-size: 0.9rem;
+		font-weight: 100;
+		line-height: 1.5;	
+	}	
+	#comments {
+		.comment {
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			border-bottom: 1px solid #D1d1d1;
+			.comment_content {
+				margin: 0;
+				padding: 0;
+			} 
+			.comment_author {
+				color: #397CAC;
+				margin-top: 0.5rem;
+				font-weight: 700;
+				font-size: 0.6em;
+			}
+		}
+	}
+}
+

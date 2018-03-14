@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    dns: "8.8.8.8"
+    volumes:
+      - ".:/app"
+    env_file: .env
+    links:
+      - db:db
+      # In production instead add external_links for db
+    command: bash -c "bin/rake assets:precompile && bin/rake db:create && bin/rake db:migrate && bin/rails s -b 0.0.0.0" 
+
+  # In production remove this and add an external link in web
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./database:/var/lib/postgresql
+volumes:
+  data: {}
