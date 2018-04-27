@@ -6,7 +6,7 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('Build Forum') {
       steps {
         sh 'echo "build successful"'
       }
