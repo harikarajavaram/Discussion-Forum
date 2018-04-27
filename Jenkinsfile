@@ -11,5 +11,10 @@ pipeline {
         sh 'echo "build successful"'
       }
     }
+    stage('Test Forum') {
+      steps {
+        sh 'rspec'
+      }
+    }
   }
 }
