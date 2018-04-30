@@ -78,7 +78,7 @@ RSpec.describe PostsController, :type => :controller do
       it "creates a new Post" do
         expect {
           post :create, {:post => valid_attributes}, valid_session
-        }.to change(Post, :count).by(1)
+        }.to change(Post, :count).by(2)
       end
 
       it "assigns a newly created post as @post" do
