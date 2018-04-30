@@ -13,7 +13,8 @@ pipeline {
     }
     stage('Test Forum') {
       steps {
-        sh 'bundle exec rspec'
+        sh '''bundle install
+bundle exec rspec'''
       }
     }
   }
