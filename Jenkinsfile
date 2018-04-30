@@ -13,6 +13,7 @@ pipeline {
     }
     stage('Test Forum') {
       steps {
+        sh 'bin/rails db:migrate RAILS_ENV=development'
         sh 'bundle exec rspec'
       }
     }
