@@ -1,0 +1,2 @@
+class DevopsController < ApplicationController
+end
