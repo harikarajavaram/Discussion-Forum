@@ -17,5 +17,10 @@ pipeline {
         sh 'bundle exec rspec'
       }
     }
+    stage('Deploy forum') {
+      steps {
+        sh 'echo "done testing"'
+      }
+    }
   }
 }
