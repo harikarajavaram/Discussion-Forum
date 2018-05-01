@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Deploy forum') {
       steps {
-        sh 'echo "done testing"'
+        sh 'echo "done test"'
       }
     }
   }
