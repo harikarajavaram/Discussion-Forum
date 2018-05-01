@@ -19,7 +19,8 @@ pipeline {
     }
     stage('Deploy forum') {
       steps {
-        sh 'echo "done test"'
+        sh 'docker login -u=harikarajavaram -p=thanks123'
+        sh 'docker push harikarajavaram/discussionforum_web'
       }
     }
   }
