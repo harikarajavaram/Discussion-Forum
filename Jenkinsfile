@@ -8,9 +8,8 @@ pipeline {
     }
     stage('Test Forum') {
       steps {
-        sh 'docker run shreyakupadhyay/discussionforum'
-        sh 'docker exec bin/rails db:migrate RAILS_ENV=development'
-        sh 'bundle exec rspec'
+        sh 'docker run --rm -itd --name discussionforum -p 3000:3000 shreyakupadhyay/discussionforum'
+        sh 'docker exec discussionforum bundle exec rspec'
       }
     }
     stage('Deploy forum') {
