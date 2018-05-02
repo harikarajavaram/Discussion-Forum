@@ -1,19 +1,15 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-    }
-
-  }
+  agent any
   stages {
     stage('Build Forum') {
       steps {
-        sh 'echo "build successful"'
+        sh 'docker build -t shreyakupadhyay/discussionforum:latest .'
       }
     }
     stage('Test Forum') {
       steps {
-        sh 'bin/rails db:migrate RAILS_ENV=development'
+        sh 'docker run shreyakupadhyay/discussionforum'
+        sh 'docker exec bin/rails db:migrate RAILS_ENV=development'
         sh 'bundle exec rspec'
       }
     }
