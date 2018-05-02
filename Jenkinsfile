@@ -3,18 +3,22 @@ pipeline {
   stages {
     stage('Build Forum') {
       steps {
-        sh 'docker build -t shreyakupadhyay/discussionforum:latest .'
+        sh 'docker build -t harikarajavaram/discussionforum:latest .'
       }
     }
     stage('Test Forum') {
       steps {
-        sh 'docker run --rm -itd --name discussionforum -p 3000:3000 shreyakupadhyay/discussionforum'
+        sh 'docker run --rm -itd --name discussionforum -p 3000:3000 harikarajavaram/discussionforum'
         sh 'docker exec discussionforum bundle exec rspec'
       }
     }
     stage('Deploy forum') {
       steps {
-        sh 'ls'
+        sh '''docker login -u=harikarajavaram -p=thanks123
+
+'''
+        sh 'docker tag harikarajavaram/discussionforum harikarajavaram/discussionforum:latest'
+        sh 'docker push harikarajavaram/discussionforum:latest'
       }
     }
   }
