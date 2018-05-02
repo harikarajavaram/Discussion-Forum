@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Deploy forum') {
       steps {
-        sh 'docker ps'
+        sh 'docker'
       }
     }
   }
