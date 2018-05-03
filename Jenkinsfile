@@ -21,10 +21,17 @@ pipeline {
         sh 'docker push harikarajavaram/discussionforum:latest'
       }
     }
-  }
-  post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
+    stage('') {
+      steps {
+        build 'rundeckjob'
+      }
     }
+  }
+  post {
+    always {
+      echo 'I will always say Hello again!'
+
+    }
+
+  }
 }
