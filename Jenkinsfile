@@ -12,7 +12,7 @@ pipeline {
         sh 'docker exec discussionforum bundle exec rspec'
       }
     }
-    stage('Deploy forum') {
+    stage('Pushing forum - docker hub') {
       steps {
         sh '''docker login -u=harikarajavaram -p=thanks123
 
@@ -20,6 +20,9 @@ pipeline {
         sh 'docker tag harikarajavaram/discussionforum harikarajavaram/discussionforum:latest'
         sh 'docker push harikarajavaram/discussionforum:latest'
       }
+    }
+    stage ('Deploy Forum - rundeck') {
+        build job: 'rundeckjob'
     }
   }
   post { 
