@@ -21,9 +21,6 @@ pipeline {
         sh 'docker push harikarajavaram/discussionforum:latest'
       }
     }
-    stage ('Deploy Forum - rundeck') {
-        build job: 'rundeckjob'
-    }
   }
   post { 
         always { 
