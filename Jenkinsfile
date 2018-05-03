@@ -21,7 +21,7 @@ pipeline {
         sh 'docker push harikarajavaram/discussionforum:latest'
       }
     }
-    stage('') {
+    stage('Deploying - Rundeck') {
       steps {
         build 'rundeckjob'
       }
