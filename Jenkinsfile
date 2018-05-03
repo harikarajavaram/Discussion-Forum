@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  triggers {
-        pollSCM('*/10 * * * *')
-    }
   stages {
     stage('Build Forum') {
       steps {
@@ -11,7 +8,6 @@ pipeline {
     }
     stage('Test Forum') {
       steps {
-        sh 'docker ps | grep deployforum && docker stop deployforum'
         sh 'docker run --rm -itd --name discussionforum -p 3000:3000 harikarajavaram/discussionforum'
         sh 'docker exec discussionforum bundle exec rspec'
         sh 'docker stop discussionforum'
@@ -38,5 +34,8 @@ pipeline {
 
     }
 
+  }
+  triggers {
+    pollSCM('*/10 * * * *')
   }
 }
