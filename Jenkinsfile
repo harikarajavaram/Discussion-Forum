@@ -10,6 +10,7 @@ pipeline {
       steps {
         sh 'docker run --rm -itd --name discussionforum -p 3000:3000 harikarajavaram/discussionforum'
         sh 'docker exec discussionforum bundle exec rspec'
+        sh 'docker stop discussionforum'
       }
     }
     stage('Pushing forum - docker hub') {
